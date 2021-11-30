@@ -26,7 +26,7 @@
 
   
 
-  <title>WUTONK的小站</title>
+  <title>M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建） | WUTONK的小站</title>
 
   
 
@@ -100,7 +100,7 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap"></h1>
+          <h1 class="title-wrap">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</h1>
           <h2 class="title-sub-wrap">
             <strong>WUTONK</strong>
             <span>发布于</span>
@@ -133,7 +133,15 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h3 id="M1-MacBook-配置dosbox-x环境（汇编环境搭建）"><a href="#M1-MacBook-配置dosbox-x环境（汇编环境搭建）" class="headerlink" title="M1 MacBook 配置dosbox-x环境（汇编环境搭建）"></a>M1 MacBook 配置dosbox-x环境（汇编环境搭建）</h3><h2 id="1-下载dosbox-x"><a href="#1-下载dosbox-x" class="headerlink" title="1.下载dosbox-x"></a>1.下载dosbox-x</h2>
+        <h2 id="1-下载dosbox-x"><a href="#1-下载dosbox-x" class="headerlink" title="1.下载dosbox-x"></a>1.下载dosbox-x</h2><p>用浏览器访问此网址获取下载请求<br><code>https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v0.83.19/dosbox-x-macosx-arm64-20211101100925.zip</code><br>先不要急着解压，文件等会再操作</p>
+<h2 id="2-下载MASM"><a href="#2-下载MASM" class="headerlink" title="2.下载MASM"></a>2.下载MASM</h2><p>用浏览器访问此网址获取下载请求（需要梯子）<br><code>https://drive.google.com/drive/folders/1rFLz8Vpfu_p_UoYAbqPlISU_Qmk_OvHI?usp=sharing</code><br>下载完成后把这两个文件复制到同一个文件夹并解压（记得删除zip包）</p>
+<h2 id="3-配置磁盘"><a href="#3-配置磁盘" class="headerlink" title="3.配置磁盘"></a>3.配置磁盘</h2><p>点击顶部的drive按钮<br><img src="/2021/11/30/m1armdos001/dosarm001.png" alt="dosarm001"></p>
+<p>选择C盘并选择从文件夹挂载<br><img src="/2021/11/30/m1armdos001/dosarm002.png" alt="dosarm002"></p>
+<p>选取MASM路径<br><img src="/2021/11/30/m1armdos001/dosarm003.png" alt="dosarm003"></p>
+<p>进入C盘符<br><img src="/2021/11/30/m1armdos001/dosarm004.png" alt="dosarm004"></p>
+<p>使用dir命令列出磁盘内的文件，如果挂载成功则如下图<br><img src="/2021/11/30/m1armdos001/dosarm005.png" alt="dosarm005"></p>
+<p>输入masm命令，已经可以正常使用<br><img src="/2021/11/30/m1armdos001/dosarm006.png" alt="dosarm006"></p>
+<h1 id="提示：由于macos安全性限制每次打开都需要手动挂载一次"><a href="#提示：由于macos安全性限制每次打开都需要手动挂载一次" class="headerlink" title="提示：由于macos安全性限制每次打开都需要手动挂载一次"></a>提示：由于macos安全性限制每次打开都需要手动挂载一次</h1>
       </section>
 
       
