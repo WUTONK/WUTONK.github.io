@@ -26,7 +26,7 @@
 
   
 
-  <title>M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建） | WUTONK的小站</title>
+  <title>vscode git提示99+的解决方法 | WUTONK的小站</title>
 
   
 
@@ -100,11 +100,11 @@
     <div class="header-content">
       <div class="post-text layout-block">
         <div class="layout-margin">
-          <h1 class="title-wrap">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</h1>
+          <h1 class="title-wrap">vscode git提示99+的解决方法</h1>
           <h2 class="title-sub-wrap">
             <strong>WUTONK</strong>
             <span>发布于</span>
-            <time  class="article-date" datetime="2021-11-30T09:42:33.480Z" itemprop="datePublished">2021-11-30</time>
+            <time  class="article-date" datetime="2021-12-01T00:38:39.111Z" itemprop="datePublished">2021-12-01</time>
           </h2>
           <ul class="wrap-list dark">
   
@@ -133,43 +133,26 @@
       
       
       <section class="article-entry markdown-body layout-margin content-padding--large soft-size--large soft-style--box">
-        <h2 id="1-下载dosbox-x"><a href="#1-下载dosbox-x" class="headerlink" title="1.下载dosbox-x"></a>1.下载dosbox-x</h2><p>用浏览器访问此网址获取下载请求<br><code>https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v0.83.19/dosbox-x-macosx-arm64-20211101100925.zip</code><br>先不要急着解压，文件等会再操作</p>
-<h2 id="2-下载MASM"><a href="#2-下载MASM" class="headerlink" title="2.下载MASM"></a>2.下载MASM</h2><p>用浏览器访问此网址获取下载请求（需要梯子）<br><code>https://drive.google.com/drive/folders/1rFLz8Vpfu_p_UoYAbqPlISU_Qmk_OvHI?usp=sharing</code><br>下载完成后把这两个文件复制到同一个文件夹并解压（记得删除zip包）</p>
-<h2 id="3-配置磁盘"><a href="#3-配置磁盘" class="headerlink" title="3.配置磁盘"></a>3.配置磁盘</h2><p>点击顶部的drive按钮<br><img src="/2021/11/30/m1armdos001/dosarm001.png" alt="dosarm001"></p>
-<p>选择C盘并选择从文件夹挂载<br><img src="/2021/11/30/m1armdos001/dosarm002.png" alt="dosarm002"></p>
-<p>选取MASM路径<br><img src="/2021/11/30/m1armdos001/dosarm003.png" alt="dosarm003"></p>
-<p>进入C盘符<br><img src="/2021/11/30/m1armdos001/dosarm004.png" alt="dosarm004"></p>
-<p>使用dir命令列出磁盘内的文件，如果挂载成功则如下图<br><img src="/2021/11/30/m1armdos001/dosarm005.png" alt="dosarm005"></p>
-<p>输入masm命令，已经可以正常使用<br><img src="/2021/11/30/m1armdos001/dosarm006.png" alt="dosarm006"></p>
-<h1 id="提示：由于macos安全性限制每次打开都需要手动挂载一次"><a href="#提示：由于macos安全性限制每次打开都需要手动挂载一次" class="headerlink" title="提示：由于macos安全性限制每次打开都需要手动挂载一次"></a>提示：由于macos安全性限制每次打开都需要手动挂载一次</h1>
+        <p>有一次手贱不小心git init的时候出错了，于是vscode侧边栏的git就一直提示99+ 一打开发现整个usr(用户)文件夹下的内容都被扫描了，不说废话，上解决方法</p>
+<p>打开终端，cd到出问题的文件夹，输入ls -a 查看父/子文件夹是否有.git文件，然后输入并执行 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf .git</span><br></pre></td></tr></table></figure>
+
+<p>如果报错就在前缀加一个 [sudo] （可能要输入密码） </p>
+<h1 id="千-万-不-要-只-输-入-rm-rf"><a href="#千-万-不-要-只-输-入-rm-rf" class="headerlink" title="千 万 不 要 只 输 入 rm -rf !!!!!!!!!"></a>千 万 不 要 只 输 入 rm -rf !!!!!!!!!</h1>
       </section>
 
       
       
         <nav class="article-nav">
           
-            <div class="article-nav-item layout-padding">
-  <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
-    
-    <div class="card-text">
-      
-        <a href="/2021/12/01/vscgiterror001/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">vscode git提示99+的解决方法</h2>
-        </a>
-      
-      <div class="card-text--row">Newer</div>
-    </div>
-  </article>
-</div>
-          
           
             <div class="article-nav-item layout-padding">
   <article class="card-container article-nav-card content-padding--primary soft-size--large soft-style--box">
     
     <div class="card-text">
       
-        <a href="/2021/10/20/hello-world/" itemprop="url">
-          <h2 class="card-text--title text-ellipsis">Hello World</h2>
+        <a href="/2021/11/30/m1armdos001/" itemprop="url">
+          <h2 class="card-text--title text-ellipsis">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</h2>
         </a>
       
       <div class="card-text--row">Older</div>
