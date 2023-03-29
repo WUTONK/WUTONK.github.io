@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 7.0.0-rc1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>powerlevel10k 去除用户名或主机名显示 - WUTONK的小站</title>
+
+  
+    <meta name="description" content="如果你不关心过程只想看解决方案请点击这里跳转 过程因为zsh默认会显示用户名，而我的用户名用的是真实姓名，所以为了隐私需要隐藏，在bing了一下之后找到了个修改主题文件的解决方法，我按照教程放到了~&#x2F;.zshrc里，但是没有生效（这里挖个坑） 教程链接 我看到了部分其他教程是将prompt_context() 放在主题文件中，但是我复制到主题文件后仍然无效 这个过程中顺带发现我的主题地址和其他教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="powerlevel10k 去除用户名或主机名显示">
+<meta property="og:url" content="https://wutonk.xyz/2023/03/29/powerlevel10k%20%E5%8E%BB%E9%99%A4%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%98%BE%E7%A4%BA/index.html">
+<meta property="og:site_name" content="WUTONK的小站">
+<meta property="og:description" content="如果你不关心过程只想看解决方案请点击这里跳转 过程因为zsh默认会显示用户名，而我的用户名用的是真实姓名，所以为了隐私需要隐藏，在bing了一下之后找到了个修改主题文件的解决方法，我按照教程放到了~&#x2F;.zshrc里，但是没有生效（这里挖个坑） 教程链接 我看到了部分其他教程是将prompt_context() 放在主题文件中，但是我复制到主题文件后仍然无效 这个过程中顺带发现我的主题地址和其他教程">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img.wutonk.xyz/blog/posts/powerlevel10k_1/image-1.png">
+<meta property="og:image" content="https://img.wutonk.xyz/blog/posts/powerlevel10k_1/image-2.png">
+<meta property="article:published_time" content="2023-03-29T03:00:00.000Z">
+<meta property="article:modified_time" content="2023-03-29T10:00:29.238Z">
+<meta property="article:author" content="WUTONK">
+<meta property="article:tag" content="美化">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img.wutonk.xyz/blog/posts/powerlevel10k_1/image-1.png">
+  
+  
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_hyaline.png">
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_hyaline.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub cap">学之染人，甚于丹青</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item active" href="/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/more/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/blog/" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">powerlevel10k 去除用户名或主机名显示</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%87%E7%A8%8B"><span class="toc-text">过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95"><span class="toc-text">解决方法</span></a></li></ol></div></div></widget>
+
+
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-29T03:00:00.000Z">2023-03-29</time></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>powerlevel10k 去除用户名或主机名显示</span></h1>
+<p><strong>如果你不关心过程只想看解决方案请<a href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95">点击这里跳转</a></strong></p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>因为zsh默认会显示用户名，而我的用户名用的是真实姓名，所以为了隐私需要隐藏，在bing了一下之后找到了个修改主题文件的解决方法，我按照教程放到了<code>~/.zshrc</code>里，但是没有生效（这里挖个坑） <a target="_blank" rel="noopener" href="https://www.cnblogs.com/ilizhu/p/11390400.html">教程链接</a></p>
+<p>我看到了部分其他教程是将<code>prompt_context() </code>放在主题文件中，但是我复制到主题文件后仍然无效</p>
+<p>这个过程中顺带发现我的主题地址和其他教程里的不一样，其他教程里的主题文件路径是在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.oh-my-zsh/themes/xxx.zsh-theme</span><br></pre></td></tr></table></figure>
+<p>而我是在</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme</span><br></pre></td></tr></table></figure>
+<p>因而进一步发现了我没有首次配置后自动生成的<code>~/.p10k</code>文件，因为我的所有powerlevel10k自定义主题设置都是放在<code>~.zhsrc</code>的（我是按照这个教程直接设置我的终端 <a target="_blank" rel="noopener" href="https://blog.csdn.net/hch814/article/details/108434036">教程链接</a>）</p>
+<p>开始确认要编写的文件确实是<code>.zshrc</code>没错后，怀疑是不是<code>.zshrc</code>的函数声明漏写了；教程中因为是直接放在主题文件下所以默认是函数，我没有修改直接复制到<code>.zshrc</code>，但是加上之后依然没有生效</p>
+<p>我回看了第一个教程，确实是没有写声明的，问题很明显不是关于<code>prompt_context() &#123;&#125;</code>函数设置的</p>
+<p>再进一步查找，我在p10k官网仓库的<a target="_blank" rel="noopener" href="https://github.com/romkatv/powerlevel10k#how-do-i-add-username-andor-hostname-to-prompt">How do I add username and&#x2F;or hostname to prompt?</a>设置介绍下发现了一个名为<code> POWERLEVEL9K_LEFT_PROMPT_ELEMENTS</code>的prompt设置函数（prompt在这里应该是提示符的意思，这里得吐槽下微软的蹩脚翻译，把prompt翻译为了“令人惊叹的”😅）</p>
+<p>在我的.zshrc文件中查找这条函数，内容为：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user device virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br></pre></td></tr></table></figure>
+
+<p>按照函数名，这些形参显然就是左边显示的内容</p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/blog/posts/powerlevel10k_1/image-1.png" alt="image-1"></p>
+<p>按照顺序，可以发现<code>user</code>&#x3D; 用户名 <code>device</code>&#x3D;主机名</p>
+<hr>
+<p>现在知道了参数属性，只需要按照需要修改就好了，这里我希望只删除用户名，所以改为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#删除user</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(device virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br></pre></td></tr></table></figure>
+
+<p>然后重载zsh使配置生效</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#终端输入</span></span><br><span class="line">zsh</span><br></pre></td></tr></table></figure>
+<p>完成！<br><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/blog/posts/powerlevel10k_1/image-2.png" alt="image-2"></p>
+<h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><p>首先查看是否有<code>~/.p10k</code>文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">将此命令复制到终端中运行</span></span><br><span class="line">if ls ~/.p10k &gt;/dev/null 2&gt;&amp;1;then </span><br><span class="line">echo &quot;文件存在&quot; </span><br><span class="line">else</span><br><span class="line">    echo &quot;文件不存在&quot; </span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>如果有则在<code> .p10k</code>文件中进行操作，如果没有则像我一样在<code>.zshrc</code>中进行操作</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">##找到并修改 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS 设置</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user device virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br><span class="line"><span class="comment"># 如果要只显示用户名</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(device virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br><span class="line"><span class="comment"># 如果要只显示主机名</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(user virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br><span class="line"><span class="comment"># 如果要两个都不显示</span></span><br><span class="line">POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(virtualenv <span class="built_in">dir</span> vcs newline prompt_char)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 使配置生效</span></span><br><span class="line"><span class="comment"># 终端运行以重新载入zsh</span></span><br><span class="line">zsh</span><br></pre></td></tr></table></figure>
+<p>enjoy p10K!</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2023/03/29/m1armdos001/">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2022/05/26/links/">links</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="WUTONK/BlogGiscus" data-repo-id="R_kgDOJPlrUg" data-category="Announcements" data-category-id="DIC_kwDOJPlrUs4CVXUv" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本站由 <a href="/">@anonymity</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/source/search/search.json","content":true,"codeblock":true});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
