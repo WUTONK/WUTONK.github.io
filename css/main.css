@@ -65,6 +65,9 @@
     --site-bg: #000;
   }
 }
+.md-text.content {
+  width: 900px;
+}
 pre {
   font-family: Menlo, Monaco, Consolas, system-ui, "Courier New", monospace, sans-serif;
   font-size: 0.8125rem;

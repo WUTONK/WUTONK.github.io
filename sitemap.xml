@@ -2,16 +2,70 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wutonk.xyz/baidu_verify_codeva-smyzZvfkl8</loc>
+    <loc>https://wutonk.xyz/about/thisweb</loc>
     
-    <lastmod>2023-03-29</lastmod>
+    <lastmod>2023-03-31</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/adout_wutonk</loc>
+    <loc>https://wutonk.xyz/about/me</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/post_masterplate/%E6%96%87%E7%AB%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%A8%A1%E7%89%88</loc>
+    
+    <lastmod>2023-03-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/post_masterplate/%E6%A0%87%E7%AD%BE%E7%BB%84%E4%BB%B6%E6%A8%A1%E7%89%88</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/images/AboutMe</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/about/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/friends/</loc>
+    
+    <lastmod>2023-03-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/baidu_verify_codeva-smyzZvfkl8</loc>
     
     <lastmod>2023-03-29</lastmod>
     
@@ -76,7 +130,7 @@
 
   <url>
     <loc>https://wutonk.xyz/</loc>
-    <lastmod>2023-03-29</lastmod>
+    <lastmod>2023-03-31</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -84,7 +138,7 @@
   
   <url>
     <loc>https://wutonk.xyz/tags/%E7%BE%8E%E5%8C%96/</loc>
-    <lastmod>2023-03-29</lastmod>
+    <lastmod>2023-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 7.0.0-rc1">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>WUTONK的小站</title>
+
+  
+    <meta name="description" content="(官方教程)[标签插件（Tag） | Hexo](steller教程)[Stellar：使用标签插件增强阅读体验 - XAOXUU] 示例教程文档官方教程文档title: 标签插件（Tag）标签插件帮助开发者在文章中快速插入内容。 概要12hexo.extend.tag.register(name, function(args, content)&amp;#123;&amp;#125;, options);  标">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WUTONK的小站">
+<meta property="og:url" content="https://wutonk.xyz/post_masterplate/%E6%A0%87%E7%AD%BE%E7%BB%84%E4%BB%B6%E6%A8%A1%E7%89%88">
+<meta property="og:site_name" content="WUTONK的小站">
+<meta property="og:description" content="(官方教程)[标签插件（Tag） | Hexo](steller教程)[Stellar：使用标签插件增强阅读体验 - XAOXUU] 示例教程文档官方教程文档title: 标签插件（Tag）标签插件帮助开发者在文章中快速插入内容。 概要12hexo.extend.tag.register(name, function(args, content)&amp;#123;&amp;#125;, options);  标">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-03-30T16:32:26.478Z">
+<meta property="article:modified_time" content="2023-03-30T16:32:26.478Z">
+<meta property="article:author" content="WUTONK">
+<meta property="article:tag" content="WUTONK">
+<meta name="twitter:card" content="summary">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="WUTONK的小站" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_hyaline_big.png">
+  
+
+  
+
+  
+
+
+  
+</head>
+
+<body>
+  
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='page'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub normal cap">学之染人，甚于丹青</div><div class="sub hover cap" style="opacity:0"> 💻Higher, faster, stronger</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/posts/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/more/">更多</a></nav>
+</header>
+
+
+<div class="widgets">
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B"><span class="toc-number">1.</span> <span class="toc-text">示例</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%98%E6%96%B9%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3"><span class="toc-number">2.</span> <span class="toc-text">官方教程文档</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#title-%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6%EF%BC%88Tag%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">title: 标签插件（Tag）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A6%82%E8%A6%81"><span class="toc-number">4.</span> <span class="toc-text">概要</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A7%BB%E9%99%A4%E6%A0%87%E7%AD%BE%E6%8F%92%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">移除标签插件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E9%A1%B9"><span class="toc-number">6.</span> <span class="toc-text">选项</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#ends"><span class="toc-number">6.1.</span> <span class="toc-text">ends</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#async"><span class="toc-number">6.2.</span> <span class="toc-text">async</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%8C%83%E4%BE%8B"><span class="toc-number">7.</span> <span class="toc-text">范例</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B2%A1%E6%9C%89%E7%BB%93%E6%9D%9F%E6%A0%87%E7%AD%BE"><span class="toc-number">7.1.</span> <span class="toc-text">没有结束标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%89%E7%BB%93%E6%9D%9F%E6%A0%87%E7%AD%BE"><span class="toc-number">7.2.</span> <span class="toc-text">有结束标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9D%9E%E5%90%8C%E6%AD%A5%E6%B8%B2%E6%9F%93"><span class="toc-number">7.3.</span> <span class="toc-text">非同步渲染</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Front-matter-%E5%92%8C%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE"><span class="toc-number">8.</span> <span class="toc-text">Front-matter 和用户配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#strller%E6%95%99%E7%A8%8B%E6%96%87%E6%A1%A3"><span class="toc-number">9.</span> <span class="toc-text">strller教程文档</span></a></li></ol></div></div></widget>
+
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" title="social.github" href="https://github.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/github_light.svg"/></a><a class="social" title="social.gitlab" href="https://gitlab.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/github_light.svg"/></a><a class="social" title="social.bilibili" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/bilibili_light.svg"/></a><a class="social" title="social.telegram" href="https://t.me/WUTONK386" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/telegram_light.svg"/></a><a class="social" title="social.mail" href="mailto:wutonk@wutonk.xyz" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/mail_light.svg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+  
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub normal cap">学之染人，甚于丹青</div><div class="sub hover cap" style="opacity:0"> 💻Higher, faster, stronger</div></a></div></header>
+
+
+
+      
+
+
+
+<article class="md-text content page"><p>(官方教程)[<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/api/tag.html">标签插件（Tag） | Hexo</a>]<br>(steller教程)[<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/tag-plugins/">Stellar：使用标签插件增强阅读体验 - XAOXUU</a>]</p>
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><h1 id="教程文档"><a href="#教程文档" class="headerlink" title="教程文档"></a>教程文档</h1><h2 id="官方教程文档"><a href="#官方教程文档" class="headerlink" title="官方教程文档"></a>官方教程文档</h2><h2 id="title-标签插件（Tag）"><a href="#title-标签插件（Tag）" class="headerlink" title="title: 标签插件（Tag）"></a>title: 标签插件（Tag）</h2><p>标签插件帮助开发者在文章中快速插入内容。</p>
+<h2 id="概要"><a href="#概要" class="headerlink" title="概要"></a>概要</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(name, <span class="keyword">function</span>(<span class="params">args, content</span>)&#123;</span><br><span class="line">&#125;, options);</span><br></pre></td></tr></table></figure>
+
+<p>标签函数会传入两个参数：<code>args</code> 和 <code>content</code>，前者代表开发者在使用标签插件时传入的参数，而后者则是标签插件所覆盖的内容。</p>
+<p>从 Hexo 3 开始，因为新增了非同步渲染功能，而改用 <a target="_blank" rel="noopener" href="https://mozilla.github.io/nunjucks/">Nunjucks</a> 作为渲染引擎，其行为可能会与过去使用的 <a target="_blank" rel="noopener" href="https://node-swig.github.io/swig-templates/">Swig</a> 有些许差异。</p>
+<h2 id="移除标签插件"><a href="#移除标签插件" class="headerlink" title="移除标签插件"></a>移除标签插件</h2><p>使用 <code>unregister()</code> 来用自定义函数替换现有的 <a href="/zh-cn/docs/tag-plugins">标签插件</a>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">unregister</span>(name);</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">tagFn</span> = (<span class="params">args, content</span>) =&gt; &#123;</span><br><span class="line">  content = <span class="string">&#x27;something&#x27;</span>;</span><br><span class="line">  <span class="keyword">return</span> content;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// https://hexo.io/docs/tag-plugins#YouTube</span></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">unregister</span>(<span class="string">&#x27;youtube&#x27;</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;youtube&#x27;</span>, tagFn);</span><br></pre></td></tr></table></figure>
+
+<h2 id="选项"><a href="#选项" class="headerlink" title="选项"></a>选项</h2><h3 id="ends"><a href="#ends" class="headerlink" title="ends"></a>ends</h3><p>使用结束标签，此选项默认为 <code>false</code>。</p>
+<h3 id="async"><a href="#async" class="headerlink" title="async"></a>async</h3><p>开启非同步模式，此选项默认为 <code>false</code>。</p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><h3 id="没有结束标签"><a href="#没有结束标签" class="headerlink" title="没有结束标签"></a>没有结束标签</h3><p>插入 Youtube 影片。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;youtube&#x27;</span>, <span class="keyword">function</span>(<span class="params">args</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> id = args[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;&lt;div class=&quot;video-container&quot;&gt;&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;http://www.youtube.com/embed/&#x27;</span> + id + <span class="string">&#x27;&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;&lt;/div&gt;&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="有结束标签"><a href="#有结束标签" class="headerlink" title="有结束标签"></a>有结束标签</h3><p>插入 pull quote。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;pullquote&#x27;</span>, <span class="keyword">function</span>(<span class="params">args, content</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> className =  args.<span class="title function_">join</span>(<span class="string">&#x27; &#x27;</span>);</span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;&lt;blockquote class=&quot;pullquote&#x27;</span> + className + <span class="string">&#x27;&quot;&gt;&#x27;</span> + content + <span class="string">&#x27;&lt;/blockquote&gt;&#x27;</span>;</span><br><span class="line">&#125;, &#123;<span class="attr">ends</span>: <span class="literal">true</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="非同步渲染"><a href="#非同步渲染" class="headerlink" title="非同步渲染"></a>非同步渲染</h3><p>插入文件。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;hexo-fs&#x27;</span>);</span><br><span class="line"><span class="keyword">var</span> pathFn = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;include_code&#x27;</span>, <span class="keyword">function</span>(<span class="params">args</span>)&#123;</span><br><span class="line">  <span class="keyword">var</span> filename = args[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">var</span> path = pathFn.<span class="title function_">join</span>(hexo.<span class="property">source_dir</span>, filename);</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> fs.<span class="title function_">readFile</span>(path).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">content</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;&lt;pre&gt;&lt;code&gt;&#x27;</span> + content + <span class="string">&#x27;&lt;/code&gt;&lt;/pre&gt;&#x27;</span>;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;, &#123;<span class="attr">async</span>: <span class="literal">true</span>&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="Front-matter-和用户配置"><a href="#Front-matter-和用户配置" class="headerlink" title="Front-matter 和用户配置"></a>Front-matter 和用户配置</h2><p>以下任何选项都是有效的：</p>
+<ol>
+<li></li>
+</ol>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;foo&#x27;</span>, <span class="keyword">function</span> (<span class="params">args</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> [firstArg] = args;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// User config</span></span><br><span class="line">  <span class="keyword">const</span> &#123; config &#125; = hexo;</span><br><span class="line">  <span class="keyword">const</span> editor = config.<span class="property">author</span> + firstArg;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Theme config</span></span><br><span class="line">  <span class="keyword">const</span> &#123; <span class="attr">config</span>: themeCfg &#125; = hexo.<span class="property">theme</span>;</span><br><span class="line">  <span class="keyword">if</span> (themeCfg.<span class="property">fancybox</span>) <span class="comment">// do something...</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Front-matter</span></span><br><span class="line">  <span class="keyword">const</span> &#123; title &#125; = <span class="variable language_">this</span>; <span class="comment">// article&#x27;s (post/page) title</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// Article&#x27;s content</span></span><br><span class="line">  <span class="keyword">const</span> &#123; _content &#125; = <span class="variable language_">this</span>; <span class="comment">// original content</span></span><br><span class="line">  <span class="keyword">const</span> &#123; content &#125; = <span class="variable language_">this</span>; <span class="comment">// HTML-rendered content</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="string">&#x27;foo&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li></li>
+</ol>
+<figure class="highlight js"><figcaption><span>index.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo.<span class="property">extend</span>.<span class="property">tag</span>.<span class="title function_">register</span>(<span class="string">&#x27;foo&#x27;</span>, <span class="built_in">require</span>(<span class="string">&#x27;./lib/foo&#x27;</span>)(hexo));</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><figcaption><span>lib/foo.js</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">module</span>.<span class="property">exports</span> = <span class="function"><span class="params">hexo</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">fooFn</span>(<span class="params">args</span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> [firstArg] = args;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; config &#125; = hexo;</span><br><span class="line">    <span class="keyword">const</span> editor = config.<span class="property">author</span> + firstArg;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; <span class="attr">config</span>: themeCfg &#125; = hexo.<span class="property">theme</span>;</span><br><span class="line">    <span class="keyword">if</span> (themeCfg.<span class="property">fancybox</span>) <span class="comment">// do something...</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> &#123; title, _content, content &#125; = <span class="variable language_">this</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;foo&#x27;</span>;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h2 id="strller教程文档"><a href="#strller教程文档" class="headerlink" title="strller教程文档"></a>strller教程文档</h2></article>
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body giscus'>
+      
+
+<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
+
+<div id="giscus" data-repo="WUTONK/BlogGiscus" data-repo-id="R_kgDOJPlrUg" data-category="Announcements" data-category-id="DIC_kwDOJPlrUs4CVXUv" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a><a target="_blank" rel="noopener" href="https://github.com/WUTONK">GitHub</a></div></div><div class="text"><p>本站由 <a href="/about/me">@WUTONK</a> 使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处<br><br/></p>
+<center>备案号：<a target="_blank" rel="noopener" href="https://icp.gov.moe/?keyword=wutonk.xyz">萌ICP备20212018号</a></center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function loadJS() {
+    const els = document.querySelectorAll("#comments #giscus");
+    if (els.length === 0) return;
+    els.forEach((el, i) => {
+      try {
+        el.innerHTML = '';
+      } catch (error) {
+        console.log(error);
+      }
+      var script = document.createElement('script');
+      script.src = 'https://giscus.app/client.js';
+      script.async = true;
+      for (let key of Object.keys(el.attributes)) {
+        let attr = el.attributes[key];
+        if (['class', 'id'].includes(attr.name) === false) {
+          script.setAttribute(attr.name, attr.value);
+        }
+      }
+      el.appendChild(script);
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    loadJS();
+  });
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
