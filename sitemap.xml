@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wutonk.xyz/more/</loc>
+    <loc>https://wutonk.xyz/about/</loc>
     
     <lastmod>2023-04-03</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/</loc>
+    <loc>https://wutonk.xyz/more/</loc>
     
     <lastmod>2023-04-03</lastmod>
     
@@ -38,7 +38,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/my_gpg</loc>
+    <loc>https://wutonk.xyz/about/my_github</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -47,7 +47,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/my_github</loc>
+    <loc>https://wutonk.xyz/about/my_gpg</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -128,7 +128,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/vscgiterror001/</loc>
+    <loc>https://wutonk.xyz/powerlevel10k%20%E5%8E%BB%E9%99%A4%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%98%BE%E7%A4%BA/</loc>
     
     <lastmod>2023-03-29</lastmod>
     
@@ -137,7 +137,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/powerlevel10k%20%E5%8E%BB%E9%99%A4%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%98%BE%E7%A4%BA/</loc>
+    <loc>https://wutonk.xyz/vscgiterror001/</loc>
     
     <lastmod>2023-03-29</lastmod>
     

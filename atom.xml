@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>WUTONK的小站</title>
-  
+  <icon>https://img.wutonk.xyz/icons/sidebar/rss_light.svg</icon>
   <subtitle>学之染人，甚于丹青 | 💻Higher, faster, stronger</subtitle>
   <link href="https://wutonk.xyz/atom.xml" rel="self"/>
   
