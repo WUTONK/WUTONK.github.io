@@ -2,7 +2,79 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://wutonk.xyz/about/</loc>
+    <loc>https://wutonk.xyz/socialize/trends/timeline</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/about/games</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/about/music</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/friends/Friends_posts</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/friends/Friends_trends</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/friends/Add_FriendChain</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/about/about_this_web</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/message_board</loc>
+    
+    <lastmod>2023-04-04</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://wutonk.xyz/socialize/about/me</loc>
     
     <lastmod>2023-04-03</lastmod>
     
@@ -11,7 +83,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/more/</loc>
+    <loc>https://wutonk.xyz/socialize/</loc>
     
     <lastmod>2023-04-03</lastmod>
     
@@ -29,7 +101,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/me</loc>
+    <loc>https://wutonk.xyz/socialize/contact/my_github</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -38,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/my_github</loc>
+    <loc>https://wutonk.xyz/socialize/contact/my_gpg</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -47,16 +119,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/about/my_gpg</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wutonk.xyz/about/contact_me</loc>
+    <loc>https://wutonk.xyz/socialize/contact/contact_me</loc>
     
     <lastmod>2023-03-31</lastmod>
     
@@ -74,25 +137,7 @@
   </url>
   
   <url>
-    <loc>https://wutonk.xyz/images/About_this_dir</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wutonk.xyz/about/thisweb</loc>
-    
-    <lastmod>2023-03-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://wutonk.xyz/friends/</loc>
+    <loc>https://wutonk.xyz/socialize/friends/</loc>
     
     <lastmod>2023-03-30</lastmod>
     
@@ -166,7 +211,7 @@
 
   <url>
     <loc>https://wutonk.xyz/</loc>
-    <lastmod>2023-04-03</lastmod>
+    <lastmod>2023-04-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -174,7 +219,7 @@
   
   <url>
     <loc>https://wutonk.xyz/tags/%E7%BE%8E%E5%8C%96/</loc>
-    <lastmod>2023-04-03</lastmod>
+    <lastmod>2023-04-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

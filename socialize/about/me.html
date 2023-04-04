@@ -5,7 +5,7 @@
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
   <meta charset="utf-8">
-  
+  <meta name="robots" content="noindex,nofollow">
 
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
@@ -20,27 +20,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>Vuepress(2.x) config.ts base根目录配置和问题解决 - WUTONK的小站</title>
+  <title>关于我</title>
 
   
-    <meta name="description" content="介绍与js格式文件不同，ts的base配置仅需一行 js配置格式： 123module.exports &#x3D; &amp;#123;base:&amp;#x27;&#x2F;&amp;#x27;,&amp;#125;  ts配置格式： 1234export default defineUserconfig(&amp;#123;base : &amp;#x27;&#x2F;&amp;#x27;,&#x2F;&#x2F;下面是其他配置&amp;#125;)  如果在ts中使用了js格式，代码不会报错，IDE">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Vuepress(2.x) config.ts base根目录配置和问题解决">
-<meta property="og:url" content="https://wutonk.xyz/Vuepress%20config.ts%E6%A0%B9%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/">
+    <meta property="og:type" content="website">
+<meta property="og:title" content="WUTONK的小站">
+<meta property="og:url" content="https://wutonk.xyz/socialize/about/me">
 <meta property="og:site_name" content="WUTONK的小站">
-<meta property="og:description" content="介绍与js格式文件不同，ts的base配置仅需一行 js配置格式： 123module.exports &#x3D; &amp;#123;base:&amp;#x27;&#x2F;&amp;#x27;,&amp;#125;  ts配置格式： 1234export default defineUserconfig(&amp;#123;base : &amp;#x27;&#x2F;&amp;#x27;,&#x2F;&#x2F;下面是其他配置&amp;#125;)  如果在ts中使用了js格式，代码不会报错，IDE">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wutonk.xyz/images/Vuepress_base_001/001.png">
-<meta property="og:image" content="https://wutonk.xyz/images/Vuepress_base_001/002.png">
-<meta property="og:image" content="https://wutonk.xyz/images/Vuepress_base_001/003.png">
-<meta property="og:image" content="https://wutonk.xyz/images/Vuepress_base_001/004.png">
-<meta property="og:image" content="https://wutonk.xyz/images/Vuepress_base_001/005.png">
-<meta property="article:published_time" content="2023-03-29T10:00:29.239Z">
-<meta property="article:modified_time" content="2023-03-29T10:00:29.239Z">
+<meta property="og:image" content="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_sayhi.gif">
+<meta property="article:published_time" content="2023-04-04T12:30:08.280Z">
+<meta property="article:modified_time" content="2023-04-03T15:08:47.908Z">
 <meta property="article:author" content="WUTONK">
 <meta property="article:tag" content="WUTONK">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wutonk.xyz/images/Vuepress_base_001/001.png">
+<meta name="twitter:image" content="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_sayhi.gif">
   
   
 
@@ -71,29 +65,17 @@
   
 
 
-
-
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
+    <aside class='l_left' layout='page'>
     
 
-  
-
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub normal cap">学之染人，甚于丹青</div><div class="sub hover cap" style="opacity:0"> 💻Higher, faster, stronger</div></a></div>
-
-<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item active" href="/posts/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/socialize/">社交</a></nav>
-</header>
-
-
 <div class="widgets">
+<widget class="widget-wrapper ghuser"><div class="widget-body stellar-ghinfo-api" api="https://api.github.com/users/WUTONK"><div class="avatar" ><img no-lazy type="img" id="avatar_url" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></div><p class="username" ff="title" type="text" id="name">&nbsp;</p><p class="bio" type="text" id="bio">&nbsp;</p><div class="buttons"><a class="btn" target="_blank" rel="noopener" href="https://github.com/WUTONK?tab=followers"><span class="title" type="text" id="followers">0</span><span class="desc">followers</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/WUTONK?tab=following"><span class="title" type="text" id="following">0</span><span class="desc">following</span></a><a class="btn" target="_blank" rel="noopener" href="https://github.com/WUTONK?tab=repositories"><span class="title" type="text" id="public_repos">0</span><span class="desc">repos</span></a></div><a class="follow" target="_blank" rel="noopener" href="https://github.com/WUTONK"><svg aria-hidden="true" role="img" class="color-icon-primary" viewBox="0 0 16 16" width="1rem" height="1rem" fill="currentColor" style="display:inline-block;user-select:none;vertical-align:text-bottom;overflow:visible"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>Follow</a>
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">Vuepress(2.x) config.ts base根目录配置和问题解决</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E8%A1%A8%E7%8E%B0%E5%A6%82%E4%B8%8B"><span class="toc-number">1.0.1.</span> <span class="toc-text">问题表现如下</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li></ol></div></div></widget>
+<nav class="menu dis-select"><a class="nav-item active" href="/">主页</a><a class="nav-item" href="/posts/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/socialize/">社交</a></nav>
+</div></widget>
 
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到此内容！</div></div></div></widget>
-
-
-
-
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/Vuepress%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E8%A7%A3%E5%86%B3%E9%BB%98%E8%AE%A4%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/"><span class="title">Vuepress使用重定向解决默认语言问题</span></a><a class="item title" href="/Vuepress%20config.ts%E6%A0%B9%E7%9B%AE%E5%BD%95%E9%85%8D%E7%BD%AE%E5%92%8C%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/"><span class="title">Vuepress(2.x) config.ts base根目录配置和问题解决</span></a><a class="item title" href="/powerlevel10k%20%E5%8E%BB%E9%99%A4%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%98%BE%E7%A4%BA/"><span class="title">powerlevel10k 去除用户名或主机名显示</span></a><a class="item title" href="/vscgiterror001/"><span class="title">vscode git提示99+的解决方法</span></a><a class="item title" href="/links/"><span class="title">links</span></a><a class="item title" href="/m1armdos001/"><span class="title">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</span></a></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" title="social.github" href="https://github.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/github_light.svg"/></a><a class="social" title="social.gitlab" href="https://gitlab.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/gitlab_light.svg"/></a><a class="social" title="social.bilibili" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/bilibili_light.svg"/></a><a class="social" title="social.telegram" href="https://t.me/WUTONK386" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/telegram_light.svg"/></a><a class="social" title="social.twitter" href="https://twitter.com/WUTONK386" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/twitter_light.svg"/></a><a class="social" title="social.mail" href="mailto:wutonk@wutonk.xyz" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/mail_light.svg"/></a><a class="social" title="social.MessageBoard" href="/socialize/message_board" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/MessageBoard_light.svg"/></a></div></footer>
 
@@ -105,66 +87,9 @@
 
 
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-29T10:00:29.239Z">2023-03-29</time></div></div>
-
-<article class='md-text content post'>
-<h1 class="article-title"><span>Vuepress(2.x) config.ts base根目录配置和问题解决</span></h1>
-<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p>与js格式文件不同，ts的base配置仅需一行</p>
-<p>js配置格式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">base:&#x27;/&#x27;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>ts配置格式：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">export default defineUserconfig(&#123;</span><br><span class="line">base : &#x27;/&#x27;,</span><br><span class="line">//下面是其他配置</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-
-<p>如果在ts中使用了js格式，代码不会报错，IDE也不会提示，但是会导致base配置问题</p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../images/Vuepress_base_001/001.png" style="zoom: 67%;">
-
-<h4 id="问题表现如下"><a href="#问题表现如下" class="headerlink" title="问题表现如下"></a>问题表现如下</h4><p><code>home界面标题和介绍变为默认样式</code></p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../images/Vuepress_base_001/002.png" style="zoom: 25%;">
-
-<p><code>菜单栏消失</code></p>
-<img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../images/Vuepress_base_001/003.png" style="zoom: 25%;">
-
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p><code>把js格式的base配置文件删除，在ts的config里添加base，重启本地调试服务器</code></p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../images/Vuepress_base_001/004.png" fancybox="true"></div></div>
-
-<p><code>网页已经可以正常浏览!</code></p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="../images/Vuepress_base_001/005.png" fancybox="true"></div></div>
-
-<hr>
-<p>如果遇到问题请在下方的联系方式里联系我 <strong>使用请遵守MIT协议</strong></p>
-
-
-<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
+<article class="md-text content page"><div class="tag-plugin about"><div class="about-header"><div class="avatar"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_03_only_sayhi.gif" height="256px"></div></div><div class="about-body fs14"></div></div>
 
 </article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/Vuepress%E4%BD%BF%E7%94%A8%E9%87%8D%E5%AE%9A%E5%90%91%E8%A7%A3%E5%86%B3%E9%BB%98%E8%AE%A4%E8%AF%AD%E8%A8%80%E9%97%AE%E9%A2%98/">Vuepress使用重定向解决默认语言问题</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/vscgiterror001/">vscode git提示99+的解决方法</a></div></section></div>
-
-
-<div class="related-wrap reveal" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="/links/" title="links"><span class="title">links</span></a></div></section></div>
-
-
-
-  <div class='related-wrap md-text reveal' id="comments">
-    <section class='header cmt-title cap theme'>
-      快来参与讨论吧
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" data-repo="WUTONK/BlogGiscus" data-repo-id="R_kgDOJPlrUg" data-category="Announcements" data-category-id="DIC_kwDOJPlrUs4CVXUv" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
 
 
 
