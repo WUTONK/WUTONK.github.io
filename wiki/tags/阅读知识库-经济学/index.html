@@ -20,28 +20,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建） - WUTONK的小站</title>
+  <title>阅读知识库-经济学 - WUTONK的小站</title>
 
   
-    <meta name="description" content="1.下载dosbox-x用浏览器访问此网址获取下载请求https:&#x2F;&#x2F;github.com&#x2F;joncampbell123&#x2F;dosbox-x&#x2F;releases&#x2F;download&#x2F;dosbox-x-v0.83.19&#x2F;dosbox-x-macosx-arm64-20211101100925.zip先不要急着解压，文件等会再操作 2.下载MASM用浏览器访问此网址获取下载请求（需要梯子）https:&#x2F;&#x2F;d">
-<meta property="og:type" content="article">
-<meta property="og:title" content="M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）">
-<meta property="og:url" content="https://wutonk.xyz/m1armdos001/">
+    <meta name="description" content="WUTONK的小站">
+<meta property="og:type" content="website">
+<meta property="og:title" content="阅读知识库-经济学">
+<meta property="og:url" content="https://wutonk.xyz/wiki/tags/%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E5%BA%93-%E7%BB%8F%E6%B5%8E%E5%AD%A6/">
 <meta property="og:site_name" content="WUTONK的小站">
-<meta property="og:description" content="1.下载dosbox-x用浏览器访问此网址获取下载请求https:&#x2F;&#x2F;github.com&#x2F;joncampbell123&#x2F;dosbox-x&#x2F;releases&#x2F;download&#x2F;dosbox-x-v0.83.19&#x2F;dosbox-x-macosx-arm64-20211101100925.zip先不要急着解压，文件等会再操作 2.下载MASM用浏览器访问此网址获取下载请求（需要梯子）https:&#x2F;&#x2F;d">
+<meta property="og:description" content="WUTONK的小站">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm001.png">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm002.png">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm003.png">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm004.png">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm005.png">
-<meta property="og:image" content="https://wutonk.xyz/m1armdos001/dosarm006.png">
-<meta property="article:published_time" content="2023-03-29T10:00:29.229Z">
-<meta property="article:modified_time" content="2023-03-29T10:00:29.229Z">
 <meta property="article:author" content="WUTONK">
 <meta property="article:tag" content="WUTONK">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://wutonk.xyz/m1armdos001/dosarm001.png">
   
   
 
@@ -72,96 +63,53 @@
   
 
 
-
-
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='post'>
+    <aside class='l_left' layout='wiki_index'>
     
 
   
 
 <header class="header"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub normal cap">学之染人，甚于丹青</div><div class="sub hover cap" style="opacity:0"> 💻Higher, faster, stronger</div></a></div>
 
-<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item active" href="/posts/">文章</a><a class="nav-item" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/socialize/">社交</a></nav>
+<nav class="menu dis-select"><a class="nav-item" href="/">主页</a><a class="nav-item" href="/posts/">文章</a><a class="nav-item active" href="/wiki/">项目</a><a class="nav-item" href="/notes/">笔记</a><a class="nav-item" href="/socialize/">社交</a></nav>
 </header>
 
 
 <div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" data-filter="/wiki/" placeholder="文档搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到此内容！</div></div></div></widget>
 
-<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BDdosbox-x"><span class="toc-number">1.</span> <span class="toc-text">1.下载dosbox-x</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%B8%8B%E8%BD%BDMASM"><span class="toc-number">2.</span> <span class="toc-text">2.下载MASM</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E7%A3%81%E7%9B%98"><span class="toc-number">3.</span> <span class="toc-text">3.配置磁盘</span></a></li></ol></div></div></widget>
+<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span><a class="cap-action" id="rss" title="Subscribe" href="/atom.xml"><svg class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="8938"><path d="M800.966 947.251c0-404.522-320.872-732.448-716.69-732.448V62.785c477.972 0 865.44 395.987 865.44 884.466h-148.75z m-162.273 0h-148.74c0-228.98-181.628-414.598-405.678-414.598v-152.01c306.205 0 554.418 253.68 554.418 566.608z m-446.24-221.12c59.748 0 108.189 49.503 108.189 110.557 0 61.063-48.44 110.563-108.188 110.563-59.747 0-108.18-49.5-108.18-110.563 0-61.054 48.433-110.556 108.18-110.556z" p-id="8939"></path></svg></a></div><div class="widget-body related-posts fs14"><a class="item title" href="/wiki/Book_KnowledgeBase/economics/The_General_Theory/"><span class="title"><strong>《就业利息与货币通论》</strong><span class="dot"></span>《就业利息与货币通论》阅读随笔</span></a><a class="item title" href="/wiki/Book_KnowledgeBase/psychology/The_Crowd/"><span class="title"><strong>《乌合之众》</strong><span class="dot"></span>《乌合之众》阅读随笔</span></a><a class="item title" href="/wiki/Book_KnowledgeBase/economics/The_Road_to_Serfdom/"><span class="title"><strong>《通往奴役之路》</strong><span class="dot"></span>《通往奴役之路》阅读随笔</span></a><a class="item title" href="/wiki/Book_KnowledgeBase/psychology/Predictably_Irrational/"><span class="title"><strong>《怪诞行为学》</strong><span class="dot"></span>《怪诞行为学》阅读随笔</span></a></div></widget>
 
-<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="文章搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到此内容！</div></div></div></widget>
-
-
-
-
+<widget class="widget-wrapper timeline"><div class="widget-header cap theme dis-select"><span class="name">近期动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline stellar-timeline-api" api="https://api.github.com/repos/WUTONK/blog-timeline/issues" user="WUTONK" limit="8"></div></div></widget>
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" title="social.github" href="https://github.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/github_light.svg"/></a><a class="social" title="social.gitlab" href="https://gitlab.com/WUTONK" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/gitlab_light.svg"/></a><a class="social" title="social.bilibili" href="https://" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/bilibili_light.svg"/></a><a class="social" title="social.telegram" href="https://t.me/WUTONK386" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/telegram_light.svg"/></a><a class="social" title="social.twitter" href="https://twitter.com/WUTONK386" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/twitter_light.svg"/></a><a class="social" title="social.mail" href="mailto:wutonk@wutonk.xyz" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/mail_light.svg"/></a><a class="social" title="social.MessageBoard" href="/socialize/message_board" rel="noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/icons/footer/MessageBoard_light.svg"/></a></div></footer>
 
     </aside>
-    <div class='l_main'>
+    <div class='l_main list'>
+      
+  
+
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://img.wutonk.xyz/avatar/WUTONK_Avatar_2022_02_dark_high-export.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">WUTONK的小站</div><div class="sub normal cap">学之染人，甚于丹青</div><div class="sub hover cap" style="opacity:0"> 💻Higher, faster, stronger</div></a></div></header>
+
+
+
       
 
-      
+  
 
 
+  
 
-<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-03-29T10:00:29.229Z">2023-03-29</time></div></div>
+<div class="nav-wrap"><nav class="sub wiki cap"><a href="/wiki">所有项目</a></a><a href="/wiki/tags/%E7%9F%A5%E8%AF%86%E5%BA%93/">知识库</a></a><a class="active" href="/wiki/tags/%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E5%BA%93-%E7%BB%8F%E6%B5%8E%E5%AD%A6/">阅读知识库-经济学</a></a><a href="/wiki/tags/%E9%98%85%E8%AF%BB%E7%9F%A5%E8%AF%86%E5%BA%93-%E5%BF%83%E7%90%86%E5%AD%A6/">阅读知识库-心理学</a></a><a href="/wiki/tags/Apps/">Apps</a></a></nav></div>
 
-<article class='md-text content post'>
-<h1 class="article-title"><span>M1 MacBook 配置dosbox-x环境（dos汇编debug,MASM环境搭建）</span></h1>
-<h2 id="1-下载dosbox-x"><a href="#1-下载dosbox-x" class="headerlink" title="1.下载dosbox-x"></a>1.下载dosbox-x</h2><p>用浏览器访问此网址获取下载请求<br><code>https://github.com/joncampbell123/dosbox-x/releases/download/dosbox-x-v0.83.19/dosbox-x-macosx-arm64-20211101100925.zip</code><br>先不要急着解压，文件等会再操作</p>
-<h2 id="2-下载MASM"><a href="#2-下载MASM" class="headerlink" title="2.下载MASM"></a>2.下载MASM</h2><p>用浏览器访问此网址获取下载请求（需要梯子）<br><code>https://drive.google.com/drive/folders/1rFLz8Vpfu_p_UoYAbqPlISU_Qmk_OvHI?usp=sharing</code><br>下载完成后把这两个文件复制到同一个文件夹并解压（记得删除zip包）</p>
-<h2 id="3-配置磁盘"><a href="#3-配置磁盘" class="headerlink" title="3.配置磁盘"></a>3.配置磁盘</h2><p>点击顶部的drive按钮</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm001.png" alt="dosarm001" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm001</span></div></div>
+  <div class="post-list wiki filter"><a class="post-card wiki " href="/wiki/Book_KnowledgeBase/economics/The_Road_to_Serfdom/">
+<article class="md-text"><div class="preview"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/conver/wiki/Book_KnowledgeBase/The_Road_to_Serfdom_cover.jpeg" alt="logo" height="300px"/></div><div class="excerpt"><div class="cap breadcrumb">阅读知识库-经济学</div><h2 class="post-title">《通往奴役之路》阅读随笔</h2><p>奥地利学派古典自由主义理论对计划经济的激烈批判</p></div></article>
+</a></div><div class="post-list wiki filter"><a class="post-card wiki " href="/wiki/Book_KnowledgeBase/economics/The_General_Theory/">
+<article class="md-text"><div class="preview"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/conver/wiki/Book_KnowledgeBase/The_General_Theory_cover_glass.jpg" alt="logo" height="300px"/></div><div class="excerpt"><div class="cap breadcrumb">阅读知识库-经济学</div><h2 class="post-title">《就业利息与货币通论》阅读随笔</h2><p>凯恩斯经济学流派的奠定著作，现代经济运行的理论根基</p></div></article>
+</a></div><div class="post-list wiki filter"><a class="post-card wiki " href="/wiki/Book_KnowledgeBase/psychology/Predictably_Irrational/">
+<article class="md-text"><div class="preview"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://img.wutonk.xyz/conver/wiki/Book_KnowledgeBase/Predictably_Irrational_cover_glass.jpg" alt="logo" height="300px"/></div><div class="excerpt"><div class="cap breadcrumb">阅读知识库-心理学</div><h2 class="post-title">《怪诞行为学》阅读随笔</h2><p>探索人类非理性行为与经济的关系</p></div></article>
+</a></div>
 
-<p>选择C盘并选择从文件夹挂载</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm002.png" alt="dosarm002" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm002</span></div></div>
-
-<p>选取MASM路径</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm003.png" alt="dosarm003" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm003</span></div></div>
-
-<p>进入C盘符</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm004.png" alt="dosarm004" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm004</span></div></div>
-
-<p>使用dir命令列出磁盘内的文件，如果挂载成功则如下图</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm005.png" alt="dosarm005" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm005</span></div></div>
-
-<p>输入masm命令，已经可以正常使用</p>
-<div class="tag-plugin image"><div class="image-bg"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/m1armdos001/dosarm006.png" alt="dosarm006" fancybox="true"></div><div class="image-meta"><span class="image-caption center">dosarm006</span></div></div>
-
-<h1 id="提示：由于macos安全性限制每次打开都需要手动挂载一次"><a href="#提示：由于macos安全性限制每次打开都需要手动挂载一次" class="headerlink" title="提示：由于macos安全性限制每次打开都需要手动挂载一次"></a>提示：由于macos安全性限制每次打开都需要手动挂载一次</h1>
-
-<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
-</div></section></div>
-
-</article>
-
-<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/vscgiterror001/">vscode git提示99+的解决方法</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/powerlevel10k%20%E5%8E%BB%E9%99%A4%E7%94%A8%E6%88%B7%E5%90%8D%E6%88%96%E4%B8%BB%E6%9C%BA%E5%90%8D%E6%98%BE%E7%A4%BA/">powerlevel10k 去除用户名或主机名显示</a></div></section></div>
-
-
-<div class="related-wrap reveal" id="related-posts">
-    <section class='header'>
-      <div class='title cap theme'>您可能感兴趣的文章</div>
-    </section>
-    <section class='body'>
-    <div class="related-posts"><a class="item" href="/Vuepress使用重定向解决默认语言问题/" title="Vuepress使用重定向解决默认语言问题"><span class="title">Vuepress使用重定向解决默认语言问题</span></a></div></section></div>
-
-
-
-  <div class='related-wrap md-text reveal' id="comments">
-    <section class='header cmt-title cap theme'>
-      快来参与讨论吧
-    </section>
-    <section class='body cmt-body giscus'>
-      
-
-<svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg>
-
-<div id="giscus" data-repo="WUTONK/BlogGiscus" data-repo-id="R_kgDOJPlrUg" data-category="Announcements" data-category-id="DIC_kwDOJPlrUs4CVXUv" data-mapping="pathname" data-strict="0" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="zh-CN" data-loading="lazy" crossorigin="anonymous"></div>
-
-    </section>
-  </div>
 
 
 
@@ -337,34 +285,6 @@
 
 
 <!-- optional -->
-
-  <script>
-  function loadJS() {
-    const els = document.querySelectorAll("#comments #giscus");
-    if (els.length === 0) return;
-    els.forEach((el, i) => {
-      try {
-        el.innerHTML = '';
-      } catch (error) {
-        console.log(error);
-      }
-      var script = document.createElement('script');
-      script.src = 'https://giscus.app/client.js';
-      script.async = true;
-      for (let key of Object.keys(el.attributes)) {
-        let attr = el.attributes[key];
-        if (['class', 'id'].includes(attr.name) === false) {
-          script.setAttribute(attr.name, attr.value);
-        }
-      }
-      el.appendChild(script);
-    });
-  }
-  window.addEventListener('DOMContentLoaded', (event) => {
-    loadJS();
-  });
-</script>
-
 
 
 
